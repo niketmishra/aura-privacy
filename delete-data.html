@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura · Delete Your Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F2EBDC;
+      --paper-edge: #EAE3D4;
+      --ink: #1C1814;
+      --ink-soft: #46403A;
+      --ink-muted: #6B6258;
+      --rose: #C9485B;
+      --rule: rgba(28, 24, 20, 0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 28px 96px;
+    }
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 14px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .masthead .right { color: var(--ink-muted); }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-weight: normal;
+      font-size: 56px;
+      line-height: 1.05;
+      letter-spacing: -1.2px;
+      margin: 38px 0 14px;
+    }
+    h1 .italic { font-style: italic; color: var(--rose); }
+    .deck {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--ink-soft);
+      margin: 0 0 38px;
+    }
+    h2 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+      margin: 48px 0 12px;
+    }
+    h3 {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 30px 0 10px;
+    }
+    p {
+      margin: 0 0 16px;
+      color: var(--ink-soft);
+    }
+    strong { color: var(--ink); font-weight: 600; }
+    ul, ol {
+      margin: 0 0 16px;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul li {
+      padding: 6px 0 6px 18px;
+      position: relative;
+      color: var(--ink-soft);
+    }
+    ul li::before {
+      content: "·";
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      color: var(--ink-muted);
+      font-weight: bold;
+    }
+    ol {
+      counter-reset: step;
+      padding-left: 0;
+    }
+    ol li {
+      counter-increment: step;
+      padding: 16px 0 16px 56px;
+      position: relative;
+      color: var(--ink-soft);
+      border-bottom: 1px solid var(--rule);
+    }
+    ol li:last-child { border-bottom: none; }
+    ol li::before {
+      content: counter(step, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 16px;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-style: italic;
+      font-size: 28px;
+      color: var(--rose);
+      line-height: 1;
+      font-weight: normal;
+    }
+    ol li strong { display: block; color: var(--ink); font-size: 18px; margin-bottom: 4px; font-weight: 600; }
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: var(--rose);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--ink); }
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--rule);
+      margin: 38px 0;
+    }
+    .colophon {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+    .table {
+      background: var(--paper-edge);
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .table h3 { margin-top: 0; }
+    .pillar {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .pillar:last-child { border-bottom: none; }
+    .pillar .when {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      min-width: 110px;
+      padding-top: 4px;
+    }
+    .pillar .what {
+      flex: 1;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .pillar .what strong { color: var(--ink); }
+    @media (max-width: 540px) {
+      main { padding: 32px 22px 64px; }
+      h1 { font-size: 42px; letter-spacing: -0.8px; }
+      .deck { font-size: 19px; }
+      h2 { font-size: 26px; }
+      ol li { padding-left: 44px; }
+      ol li::before { font-size: 22px; top: 18px; }
+      .pillar { flex-direction: column; gap: 6px; }
+      .pillar .when { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="masthead">
+      <span>AURA · DATA DELETION</span>
+      <span class="right">App by Niket Mishra</span>
+    </div>
+
+    <h1>How to delete<br><span class="italic">your data.</span></h1>
+    <p class="deck">Aura keeps your data on your phone, not on a server. Deleting it is fast, immediate, and entirely under your control. Here is exactly how.</p>
+
+    <h2>Two ways to delete</h2>
+
+    <ol>
+      <li>
+        <strong>From inside the app (recommended)</strong>
+        Open <strong>Aura</strong> → tap the <strong>You</strong> tab in the bottom bar → tap <strong>Privacy</strong> → tap <strong>Delete account</strong> → confirm. Every byte of your data is wiped immediately, and the app returns to its first-launch state. This is the fastest path and we encourage you to use it.
+      </li>
+      <li>
+        <strong>By uninstalling Aura</strong>
+        Uninstalling the app from your phone removes all on-device storage, which is where Aura keeps everything. There is no Aura server holding a copy. Once uninstalled, nothing of yours remains anywhere.
+      </li>
+    </ol>
+
+    <hr>
+
+    <h2>What gets deleted</h2>
+    <p>Both deletion paths above wipe the following data immediately:</p>
+    <ul>
+      <li>Your readings (all playlists Aura has generated for you).</li>
+      <li>Your mood history (every mood you have selected, and when).</li>
+      <li>Your taste profile (inferred top artists, genres, languages, and adventurousness).</li>
+      <li>Marginalia (private notes you have written on individual tracks).</li>
+      <li>Liked tracks and disliked tracks.</li>
+      <li>Your display name.</li>
+      <li>OAuth refresh tokens for Google (YouTube) and Spotify, if you connected those accounts.</li>
+      <li>Any cached catalogue data (artist images, track metadata).</li>
+    </ul>
+
+    <p>If you used the in-app "Delete account" option (Step 1 above), Aura also issues a <strong>best-effort revocation</strong> of your Google OAuth grant at Google's servers, so the app's access to your YouTube account is terminated at Google's end as well.</p>
+
+    <hr>
+
+    <h2>What is kept, and for how long</h2>
+
+    <div class="table">
+      <div class="pillar">
+        <div class="when">0 days</div>
+        <div class="what"><strong>On-device user data</strong> (readings, mood history, taste profile, marginalia, display name, OAuth tokens): deleted the moment you tap "Delete account" or uninstall the app. Aura keeps no backup.</div>
+      </div>
+      <div class="pillar">
+        <div class="when">90 days</div>
+        <div class="what"><strong>Anonymized crash reports</strong> sent to Sentry (sentry.io), our crash-tracking service. Crash reports contain the error message, app version, device model, and a randomly-generated session ID. They do <strong>not</strong> contain your name, email, OAuth tokens, marginalia, or taste profile. Sentry deletes them automatically after 90 days. You can request earlier deletion by emailing the address below.</div>
+      </div>
+      <div class="pillar">
+        <div class="when">Until you revoke</div>
+        <div class="what"><strong>Your existing Google and Spotify accounts</strong> (if you connected them) remain on those services' servers, owned by you. These are not Aura's data. Manage them at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com</a> and <a href="https://www.spotify.com/account/apps/" target="_blank" rel="noopener">spotify.com/account/apps</a>. Aura's in-app delete revokes the Google grant on a best-effort basis; Spotify does not provide a programmatic revoke endpoint, so you would revoke that one yourself in Spotify's dashboard.</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>If you cannot access the app</h2>
+    <p>If you have already uninstalled Aura or lost access to your device, there is nothing left for us to delete from your side — your data lived on your phone and was removed when the app was uninstalled.</p>
+    <p>If you would still like a written confirmation of deletion, or if you want anonymized crash reports purged from Sentry sooner than the 90-day automatic deletion, email us:</p>
+    <p><strong>vmcniket@gmail.com</strong></p>
+    <p>Include the subject line <strong>"Aura — data deletion request"</strong> and let us know the device you used Aura on (Android model is fine; no personally identifiable details required). We aim to respond within 7 days.</p>
+
+    <hr>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="./">Full privacy policy</a> — what data Aura handles, where it goes, and your rights.</li>
+      <li><a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Revoke Aura's access to your Google account</a></li>
+      <li><a href="https://www.spotify.com/account/apps/" target="_blank" rel="noopener">Revoke Aura's access to your Spotify account</a></li>
+    </ul>
+
+    <div class="colophon">
+      AURA · A QUIET, GROWING PIECE · © 2026
+    </div>
+  </main>
+</body>
+</html>
