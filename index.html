@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F2EBDC;
+      --paper-edge: #EAE3D4;
+      --ink: #1C1814;
+      --ink-soft: #46403A;
+      --ink-muted: #6B6258;
+      --rose: #C9485B;
+      --rule: rgba(28, 24, 20, 0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 28px 96px;
+    }
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 14px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .masthead .right { color: var(--ink-muted); }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-weight: normal;
+      font-size: 56px;
+      line-height: 1.05;
+      letter-spacing: -1.2px;
+      margin: 38px 0 14px;
+    }
+    h1 .italic { font-style: italic; color: var(--rose); }
+    .deck {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--ink-soft);
+      margin: 0 0 38px;
+    }
+    h2 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+      margin: 48px 0 12px;
+    }
+    h3 {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 30px 0 10px;
+    }
+    p {
+      margin: 0 0 16px;
+      color: var(--ink-soft);
+    }
+    strong { color: var(--ink); font-weight: 600; }
+    ul {
+      margin: 0 0 16px;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul li {
+      padding: 6px 0 6px 18px;
+      position: relative;
+      color: var(--ink-soft);
+    }
+    ul li::before {
+      content: "·";
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      color: var(--ink-muted);
+      font-weight: bold;
+    }
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: var(--rose);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--ink); }
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--rule);
+      margin: 38px 0;
+    }
+    .colophon {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+    .toc {
+      background: var(--paper-edge);
+      padding: 20px 24px;
+      margin: 28px 0 38px;
+      font-size: 15px;
+    }
+    .toc h3 {
+      margin: 0 0 10px;
+    }
+    .toc ol {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--ink-soft);
+    }
+    .toc ol li {
+      padding: 3px 0;
+    }
+    .toc a {
+      text-decoration: none;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 540px) {
+      main { padding: 32px 22px 64px; }
+      h1 { font-size: 42px; letter-spacing: -0.8px; }
+      .deck { font-size: 19px; }
+      h2 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="masthead">
+      <span>AURA · PRIVACY</span>
+      <span class="right">Effective 23 June 2026</span>
+    </div>
+
+    <h1>What we store,<br><span class="italic">and what we don't.</span></h1>
+    <p class="deck">— Aura is a music-discovery app that lives on your phone. There is no Aura server. Almost nothing leaves your device, and the few things that do leave do so anonymously.</p>
+
+    <div class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#summary">The short version</a></li>
+        <li><a href="#what-stays">Data that never leaves your phone</a></li>
+        <li><a href="#anonymous">Anonymous data that does leave</a></li>
+        <li><a href="#optional">Data sent only when you connect an account</a></li>
+        <li><a href="#sharing">Sharing — only when you choose</a></li>
+        <li><a href="#crash">Crash reports</a></li>
+        <li><a href="#storage">How your data is stored</a></li>
+        <li><a href="#rights">Your rights and controls</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <h2 id="summary">The short version</h2>
+    <p>Aura is built local-first. The app:</p>
+    <ul>
+      <li>Has <strong>no Aura-owned server</strong> and no user accounts at our end.</li>
+      <li>Stores your readings, mood history, taste profile, liked tracks, marginalia notes, and your display name <strong>only on your device</strong>, in <strong>encrypted local storage</strong>.</li>
+      <li>Sends <strong>anonymous catalogue queries</strong> to MusicBrainz, Last.fm, and ListenBrainz so it can find and recommend songs.</li>
+      <li>Talks to <strong>Google (YouTube) and Spotify on your behalf</strong> only when you choose to connect those accounts.</li>
+      <li>Shows you a system share sheet when you send a postcard. Aura never sees where you send it.</li>
+    </ul>
+    <p>If you uninstall the app, every byte of your data goes with it.</p>
+
+    <hr>
+
+    <h2 id="what-stays">Data that never leaves your phone</h2>
+    <p>The following data lives only on your device and is never transmitted to any server, including ours:</p>
+    <ul>
+      <li><strong>Your readings</strong> (playlists Aura has generated for you).</li>
+      <li><strong>Your mood history</strong> (the moods you've selected and when).</li>
+      <li><strong>Your taste profile</strong> (inferred top artists, genres, languages, and adventurousness).</li>
+      <li><strong>Marginalia notes</strong> (the private notes you long-press to write on individual tracks).</li>
+      <li><strong>Your name</strong> (the display name you provide during onboarding).</li>
+      <li><strong>Camera frames from the face-scan feature</strong> — captured and analysed entirely on-device by the Android ML Kit face detector. No image or biometric data is uploaded.</li>
+      <li><strong>The text you type into a reading</strong> (mood phrases, sound-like queries).</li>
+      <li><strong>Liked tracks and disliked tracks.</strong></li>
+      <li><strong>OAuth refresh tokens</strong> for Google and Spotify (only if you connect those accounts).</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="anonymous">Anonymous data that does leave your phone</h2>
+    <p>To recommend music, Aura sends anonymous catalogue queries to the following public music databases. <strong>None of these requests include any user identifier.</strong> The third parties below cannot connect the requests to you personally.</p>
+    <ul>
+      <li><strong>MusicBrainz</strong> (musicbrainz.org) — for artist and recording lookups. We send the user-agent <em>"Aura/1.0 (https://github.com/vmcniket/aura)"</em> per MB's policy, which identifies the app, not the user.</li>
+      <li><strong>Last.fm</strong> (last.fm) — for similar-artist graphs and track tags.</li>
+      <li><strong>ListenBrainz</strong> (listenbrainz.org) — for session-based similar-artist signal.</li>
+      <li><strong>YouTube Data API</strong> — for music-category search results. Anonymous unless you've connected Google.</li>
+      <li><strong>YouTube InnerTube</strong> — a public YouTube endpoint used as a fallback resolver.</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="optional">Data sent only when you connect an account</h2>
+    <p>You may optionally connect a Google account (for YouTube) and/or a Spotify account. These connections are <strong>opt-in</strong> — you can use Aura entirely without them. When you choose to connect:</p>
+
+    <h3>YouTube / Google</h3>
+    <p>If you tap "Connect to YouTube" in onboarding or in Settings → Connections, Aura uses Google's standard OAuth 2.0 flow (with PKCE) to obtain:</p>
+    <ul>
+      <li>Your email address and display name (to show "connected as" in the app).</li>
+      <li>Read-only access to your YouTube liked videos and channel subscriptions, used <strong>once</strong> at connect-time to seed the on-device taste profile.</li>
+      <li>Write access to create YouTube playlists, used only when you tap "Send to YouTube Music" or "Send to YouTube" on a reading.</li>
+    </ul>
+    <p>The scopes requested are: <code>youtube.readonly</code>, <code>youtube</code>, <code>userinfo.email</code>, <code>userinfo.profile</code>. The access and refresh tokens are stored in encrypted local storage and never leave your device except in calls to Google's own APIs.</p>
+
+    <h3>Spotify</h3>
+    <p>If you tap "Connect to Spotify," Aura uses Spotify's OAuth 2.0 flow (with PKCE) to:</p>
+    <ul>
+      <li>Read your top tracks, recently played tracks, saved tracks, and playlists — used to enrich the on-device taste profile.</li>
+      <li>Create playlists on your behalf when you tap "Send to Spotify" on a reading.</li>
+    </ul>
+
+    <p>You can disconnect either account at any time from Settings → Connections. Disconnecting wipes the local tokens and (for Google) issues a best-effort token revocation at Google's servers.</p>
+
+    <hr>
+
+    <h2 id="sharing">Sharing — only when you choose</h2>
+    <p>Aura includes a Postcard feature: turning a song into a stamped, signed image you can share. When you tap Send:</p>
+    <ul>
+      <li>Aura renders the postcard image entirely on your device.</li>
+      <li>The image is handed to your phone's system share sheet (Instagram, WhatsApp, Messages, etc.).</li>
+      <li>You choose where it goes. <strong>Aura never sees the destination, and the image is never sent to or stored on any Aura-controlled service.</strong></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="crash">Crash reports</h2>
+    <p>If Aura crashes or hits an unhandled error, an anonymized crash report may be sent to <strong>Sentry</strong> (sentry.io), a third-party error-tracking service we use to fix bugs. Crash reports include:</p>
+    <ul>
+      <li>The error message and JavaScript stack trace.</li>
+      <li>App version, device model, OS version.</li>
+      <li>A randomly-generated session ID (not linked to your identity).</li>
+    </ul>
+    <p>Crash reports do <strong>not</strong> include your name, email, OAuth tokens, taste profile, marginalia notes, or any other personal data we hold on-device. Sentry retains crash data for 90 days.</p>
+
+    <hr>
+
+    <h2 id="storage">How your data is stored</h2>
+    <p>Everything on-device is stored in <strong>MMKV</strong>, a fast key-value store, with <strong>AES encryption</strong>. The encryption key is generated on first launch with a cryptographic random number generator and stored in the <strong>iOS Keychain / Android Keystore</strong>, which are protected by your device's secure-element hardware (Secure Enclave on iOS, StrongBox / TEE on Android).</p>
+    <p>Even with physical access to your phone, the data is unreadable without your device's unlock credentials.</p>
+
+    <hr>
+
+    <h2 id="rights">Your rights and controls</h2>
+    <p>From Settings → Privacy, you can at any time:</p>
+    <ul>
+      <li><strong>Download your data.</strong> Exports every byte of on-device data (taste profile, readings, mood history, interactions, marginalia) as a JSON file, then hands it to your system share sheet.</li>
+      <li><strong>Delete account.</strong> Wipes every persisted store, issues a best-effort revoke of your Google OAuth grant at Google's servers, and returns you to onboarding with a clean slate.</li>
+    </ul>
+    <p>Uninstalling the app also wipes all on-device data — there's nothing else to clean up.</p>
+    <p>If you've connected Spotify, you can revoke Aura's access at any time from <a href="https://www.spotify.com/account/apps/" target="_blank" rel="noopener">spotify.com/account/apps</a>. If you've connected Google, you can revoke at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com → Security → Third-party apps</a>.</p>
+
+    <h3>EU residents (GDPR)</h3>
+    <p>Aura is designed so that the developer (the data controller in EU terms) holds no user data on any server. The "right to access," "right to erasure," and "right to data portability" are exercised directly in the app via the Download / Delete buttons described above. We do not need to receive a request — your data is already entirely in your hands.</p>
+
+    <h3>California residents (CCPA/CPRA)</h3>
+    <p>Aura does not sell or share personal information for cross-context behavioural advertising. We do not collect personal information at any Aura-owned server. The "right to know" and "right to delete" are exercised in-app.</p>
+
+    <h3>India residents (DPDP Act)</h3>
+    <p>Aura processes your personal data lawfully under your consent (given by completing onboarding and connecting any optional accounts). You can withdraw consent at any time by disconnecting accounts or deleting the app.</p>
+
+    <hr>
+
+    <h2 id="children">Children's privacy</h2>
+    <p>Aura is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has connected an account through Aura, please contact us and we will assist you in revoking that account's grant.</p>
+
+    <hr>
+
+    <h2 id="changes">Changes to this policy</h2>
+    <p>This privacy policy may be updated to reflect changes in Aura's features or in applicable law. When we make material changes, we will update the "Effective" date at the top and surface a brief notice in-app on next launch.</p>
+
+    <hr>
+
+    <h2 id="contact">Contact</h2>
+    <p>If you have any questions about this privacy policy or your data, write to:</p>
+    <p><strong>vmcniket@gmail.com</strong></p>
+    <p>We aim to respond within 7 days.</p>
+
+    <div class="colophon">
+      AURA · A QUIET, GROWING PIECE — © 2026
+    </div>
+  </main>
+</body>
+</html>
